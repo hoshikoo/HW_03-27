@@ -1,4 +1,4 @@
-package nyc.c4q.ac21;
+package nyc.c4q.hoshikoo;
 
 /**
  * A Person class
@@ -28,7 +28,7 @@ public class Person {
         this.city = city;
     }
 
-    public void Person(String name){
+    public Person(String name){
         this.name = name;
     }
 
@@ -73,19 +73,23 @@ public class Person {
     }
 
     public static String registerChild(Person parent){
-        String childRegistration = "Person "+parent.childName+" = new Person(""+parent.childName +""", "parent.city", "\"+parent.phoneNumber+"\");
+        String childName = parent.childName;
+        String childCity = parent.city;
+        String ChildPhoneNum = parent.phoneNumber;
 
-
+        String childRegistration = "Person "+childName+" = new Parson(\""+childName+"\",  \""+childCity+"\",  \""+ChildPhoneNum+");";
 
         return childRegistration;
     }
 
-
     public static void main(String[] args) {
-       Person hoshiko = new Person("hoshiko", "Brooklyn");
-        Person cosmos = new Person("cosmos", "Chicago", "773-510-2073", "abc");
-        System.out.println(checkSameCity(hoshiko, cosmos));
-        System.out.println(registerChild(cosmos));
+
+        Person hoshiko = new Person("hoshiko", "Brooklyn");
+        Person parent = new Person("ParentName", "Chicago", "773-555-2073", "KidName");
+        System.out.println(checkSameCity(hoshiko, parent));
+        System.out.println(registerChild(parent));
+
     }
+
 
 }
