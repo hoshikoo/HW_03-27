@@ -57,12 +57,16 @@ public class Person {
     }
 
 
+//Write a function called checkSameCity which accepts as input two Person instances
+// and checks if they live in the same city.
+// The function should return a boolean value
+
 
     public static boolean checkSameCity(Person i, Person j){
         String iCity = i.getCity();
-       // iCity=iCity.toLowerCase();
+        iCity=iCity.toLowerCase();
         String jCity = j.getCity();
-        //jCity=jCity.toLowerCase();
+        jCity=jCity.toLowerCase();
 
         if (iCity.equalsIgnoreCase(jCity)){
             return true;
@@ -71,6 +75,11 @@ public class Person {
         }
 
     }
+
+    //A Person has recently had a child, whose name is 'Abc'.
+    // Write a function called registerChild which accepts as input a Person instance(Parent)
+    // and returns a new Person instance for the child, which has the same phoneNumber and
+    // city as the parent.
 
     public static String registerChild(Person parent){
         String childName = parent.childName;

@@ -1,4 +1,4 @@
-package nyc.c4q.ac21;
+package nyc.c4q.hoshikoo;
 
 import java.util.ArrayList;
 import java.util.Scanner;

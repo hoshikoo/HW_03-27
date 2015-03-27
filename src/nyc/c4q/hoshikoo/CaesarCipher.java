@@ -30,46 +30,41 @@ public class CaesarCipher {
 
 
     public static boolean codeBreaker(String a, String b) {
-        //ArrayList<int> codeNums = new ArrayList();
-        //ArrayList<int> codeNumsTwo = new ArrayList();
-
         // check string a and b length are the same
 
         if (a.length() == b.length()){
-            //check the 1st letters of each strings and use it as a condition
+            //check the 1st letters of each strings outside of loop and use it as a condition in loop
             char ca = a.charAt(0);
             int codea = (int)ca;
-            System.out.println(ca);
+
             char cb = b.charAt(0);
             int codeb = (int)cb;
-            System.out.println(cb);
-            int difference = codea-codeb; //TODO  need to add if the differentce is negative ad 26
+
+            int difference = codea-codeb; //if the differentce is negative, add 26
             if (difference <0){
                 difference = difference+26;
             }
-            System.out.println(difference);
 
-            //loop only 1 time since string a and b are the same length
+
+            //loop though the length of 1 string since both strings a and b are the same length
             for (int i =1; i< a.length();i++){
-                ca = a.charAt(i);
-                System.out.println(ca);
-                codea = (int)ca;
-                System.out.println(codea);
-                cb = b.charAt(i);
-                System.out.println(cb);
-                codeb = (int)cb;
 
-                System.out.println(codeb);
+                ca = a.charAt(i);
+                codea = (int)ca;
+
+                cb = b.charAt(i);
+                codeb = (int)cb;
 
                 int differenceinloop = codea-codeb;
                 if (differenceinloop <0){
-                    differenceinloop = differenceinloop+26;
+                    differenceinloop = differenceinloop+26;//if the differentce is negative, add 26
                 }
                 if (differenceinloop==difference){
-                   // System.out.println(codea-codeb);
                     continue;
                 }else{
-                    //inside of loop if any time the difference became different from the first letters of 2 string, break loop
+                    //inside of loop if the difference became different from
+                    // the first letters of 2 string, break loop
+
                     return false;
                 }
             }

@@ -1,4 +1,4 @@
-package nyc.c4q.ac21;
+package nyc.c4q.hoshikoo;
 
 /**
  * A representation for a election Contender
